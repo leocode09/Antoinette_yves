@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WeCareWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a161f668dac9a0edb1ef96348af4d11be7e9f28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e49f6913467146ef6cfac0c08cf743f9216e6c76")]
 [assembly: System.Reflection.AssemblyProductAttribute("WeCareWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WeCareWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
