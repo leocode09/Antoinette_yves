@@ -1,0 +1,48 @@
+﻿@page
+@model WeCareWebApp.Pages.PartnerPages.CreateModel
+
+<h4>BusinessClient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Partner.Phone" class="control-label"></label>
+                <input asp-for="Partner.Phone" class="form-control" />
+                <span asp-validation-for="Partner.Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partner.Name" class="control-label"></label>
+                <input asp-for="Partner.Name" class="form-control" />
+                <span asp-validation-for="Partner.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partner.Location" class="control-label"></label>
+                <input asp-for="Partner.Location" class="form-control" />
+                <span asp-validation-for="Partner.Location" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partner.Email" class="control-label"></label>
+                <input asp-for="Partner.Email" class="form-control" />
+                <span asp-validation-for="Partner.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partner.MomoCode" class="control-label"></label>
+                <input asp-for="Partner.MomoCode" class="form-control" />
+                <span asp-validation-for="Partner.MomoCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

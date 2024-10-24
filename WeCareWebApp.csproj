@@ -1,0 +1,78 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <UserSecretsId>d5e01a59-e83b-480c-9015-bab58a82ddb1</UserSecretsId>
+    <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Pages\DynamicPages\**" />
+    <Content Remove="Pages\DynamicPages\**" />
+    <EmbeddedResource Remove="Pages\DynamicPages\**" />
+    <None Remove="Pages\DynamicPages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220214133727_psyTrsnMigrx.cs" />
+    <Compile Remove="Migrations\20220214133727_psyTrsnMigrx.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.16.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RestSharp" Version="112.1.0" /> <!-- Updated to latest version -->
+    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="106.10.0" /> <!-- Updated to latest version -->
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="TextmagicRest" Version="1.0.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\BusinessServicePages\Create.cshtml" />
+    <None Include="Pages\BusinessServicePages\Delete.cshtml" />
+    <None Include="Pages\BusinessServicePages\Details.cshtml" />
+    <None Include="Pages\BusinessServicePages\Edit.cshtml" />
+    <None Include="Pages\BusinessServicePages\Index.cshtml" />
+    <None Include="Pages\BusinessClientPages\Create.cshtml" />
+    <None Include="Pages\BusinessClientPages\Delete.cshtml" />
+    <None Include="Pages\BusinessClientPages\Details.cshtml" />
+    <None Include="Pages\BusinessClientPages\Edit.cshtml" />
+    <None Include="Pages\BusinessClientPages\Index.cshtml" />
+    <None Include="Pages\PartnerPages\Create.cshtml" />
+    <None Include="Pages\PartnerPages\Delete.cshtml" />
+    <None Include="Pages\PartnerPages\Details.cshtml" />
+    <None Include="Pages\PartnerPages\Edit.cshtml" />
+    <None Include="Pages\RolePages\Create.cshtml" />
+    <None Include="Pages\RolePages\Delete.cshtml" />
+    <None Include="Pages\RolePages\Details.cshtml" />
+    <None Include="Pages\RolePages\Edit.cshtml" />
+    <None Include="Pages\RolePages\Index.cshtml" />
+    <None Include="Pages\UserPages\Create.cshtml" />
+    <None Include="Pages\UserPages\Delete.cshtml" />
+    <None Include="Pages\UserPages\Details.cshtml" />
+    <None Include="Pages\UserPages\Edit.cshtml" />
+    <None Include="Pages\UserPages\Index.cshtml" />
+  </ItemGroup>
+
+</Project>

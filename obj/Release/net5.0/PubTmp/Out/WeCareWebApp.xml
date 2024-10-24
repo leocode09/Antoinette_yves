@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeCareWebApp</name>
+    </assembly>
+    <members>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.SaveChanges">
+            <summary>
+            Saves the changes made on the context to update record in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Add``1(``0)">
+            <summary>
+            Generic Add to context for creation or addition of a new record to a given class represented by T
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Add``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Adding a list of objects of Type To the DbContext as Range
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Delete``1(``0)">
+            <summary>
+            Deleting a single object or a list of a given object from the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Delete``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Remove a list of objects of type T from the database context wich will result in a deletion
+            of those from the databse when save changes is called
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Update``1(``0)">
+            <summary>
+            Update a single object or a list of given object being tracked
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Update``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Updating a range or a list of object of Type T being tracked and will take effect whe save changes is called
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.IWeCareRepository.Get``1">
+            <summary>
+            Fetch data from database of any given Entity
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="F:WeCareWebApp.Services.WeCareRepository._context">
+             Inject DbContext in repository
+             SmartHrDataContext and IConfiguration initialization
+            
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.SaveChanges">
+            <summary>
+            Saves the changes made on the context to update record in the database
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Add``1(``0)">
+            <summary>
+            Adding an object of type T to the DbContext
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Add``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Adding a list of objects of Type To the DbContext as Range
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Delete``1(``0)">
+            <summary>
+            Deleting a single object or a list of a given object from the database
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Delete``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Remove a list of objects of type T from the database context wich will result in a deletion
+            of those from the databse when save changes is called
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Update``1(``0)">
+            <summary>
+            Update a single object or a list of given object being tracked
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Update``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Updating a range or a list of object of Type T being tracked and will take effect whe save changes is called
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="entity"></param>
+        </member>
+        <member name="M:WeCareWebApp.Services.WeCareRepository.Get``1">
+            <summary>
+            Fetch data from database of any given Entity
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

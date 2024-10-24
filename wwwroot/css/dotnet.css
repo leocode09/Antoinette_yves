@@ -1,0 +1,8 @@
+﻿:root {
+    --primaryColor: #000028;
+    --secondaryColor: #f4f4f4;
+    --bgMenuActive: #8e47a0;
+    --bgButton: #68217a;
+    --logoImageUrl: url('http://197.243.22.168:7085/HecFiles/tiger-soft-logo.png');
+    --bgAside: var(--primaryColor);
+}

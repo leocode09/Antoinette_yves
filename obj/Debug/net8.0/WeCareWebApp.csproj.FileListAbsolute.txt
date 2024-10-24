@@ -1,0 +1,10 @@
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.csproj.AssemblyReference.cache
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.AssemblyInfoInputs.cache
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.AssemblyInfo.cs
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.csproj.CoreCompileInputs.cache
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.MvcApplicationPartsAssemblyInfo.cs
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.RazorAssemblyInfo.cache
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.RazorAssemblyInfo.cs
+C:\JOB\WeCareWebApp\WeCareWebApp\obj\Debug\net8.0\WeCareWebApp.sourcelink.json
