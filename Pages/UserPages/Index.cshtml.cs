@@ -22,7 +22,7 @@ namespace WeCareWebApp.Pages.UserPages
             _client = client;
         }
 
-        public IList<UserDto> User { get;set; }
+        public new IList<UserDto> User { get; set; }
 
         public async Task OnGetAsync()
         {

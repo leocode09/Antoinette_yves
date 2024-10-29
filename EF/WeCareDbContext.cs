@@ -83,8 +83,8 @@ namespace WeCareWebApp.EF
 
             #region Security
 
-            modelBuilder.Entity<Role>().ToTable(nameof(Role), "Security").HasIndex(i => i.Name).IsUnique();
-            modelBuilder.Entity<Role>()
+            modelBuilder.Entity<Entities.Role>().ToTable(nameof(Entities.Role), "Security").HasIndex(i => i.Name).IsUnique();
+            modelBuilder.Entity<Entities.Role>()
                     .Property(c => c.Id)
                     .ValueGeneratedNever()
                     .HasAnnotation("DatabaseGenerated", DatabaseGeneratedOption.None);
@@ -134,7 +134,7 @@ namespace WeCareWebApp.EF
 
         #region Security
 
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Entities.Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ClientMovement> ClientMovements { get; set; }
 

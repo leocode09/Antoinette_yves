@@ -22,7 +22,8 @@ namespace WeCareWebApp.Pages.UserPages
             _client = client;
         }
 
-        public UserDto User { get; set; }
+        [BindProperty]
+        public new UserDto User { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id)
         {

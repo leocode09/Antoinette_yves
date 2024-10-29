@@ -177,9 +177,9 @@ namespace WeCareWebApp.Services
 
         #region Role
 
-        Task<List<Role>> GetRoles();
+        Task<IEnumerable<Entities.Role>> GetRoles();
 
-        Task<Role> GetRole(int id);
+        Task<Entities.Role> GetRole(int id);
 
         Task<int> GetRoleMaxId();
 

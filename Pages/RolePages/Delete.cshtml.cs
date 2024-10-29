@@ -23,7 +23,7 @@ namespace WeCareWebApp.Pages.RolePages
         }
 
         [BindProperty]
-        public Role Role { get; set; }
+        public RoleDto Role { get; set; }
 
         public async Task<IActionResult> OnGetAsync(string id)
         {
@@ -32,7 +32,7 @@ namespace WeCareWebApp.Pages.RolePages
                 return NotFound();
             }
 
-            Role = await _client.GetFromJsonAsync<Role>(Connection.ApiHost + $"/Roles/{id}");
+            Role = await _client.GetFromJsonAsync<RoleDto>(Connection.ApiHost + $"/Roles/{id}");
             
 
             if (Role == null)
@@ -49,7 +49,7 @@ namespace WeCareWebApp.Pages.RolePages
                 return NotFound();
             }
 
-            Role = await _client.GetFromJsonAsync<Role>(Connection.ApiHost + $"/Roles/{id}");
+            Role = await _client.GetFromJsonAsync<RoleDto>(Connection.ApiHost + $"/Roles/{id}");
 
             if (Role != null)
             {

@@ -25,9 +25,11 @@ namespace WeCareWebApp.Pages.PartnerPages
         [BindProperty]
         public PartnerDto Partner { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int id)
+        public int? Id { get; set; }  // Change from int to int?
+
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+            if (!id.HasValue || id.Value == 0)
             {
                 return NotFound();
             }
@@ -42,9 +44,9 @@ namespace WeCareWebApp.Pages.PartnerPages
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int id)
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null)
+            if (!id.HasValue)
             {
                 return NotFound();
             }

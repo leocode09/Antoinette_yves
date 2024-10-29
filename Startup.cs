@@ -127,93 +127,31 @@ namespace WeCareWebApp
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            Console.WriteLine("Configuring application...");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
             else
             {
-                app.UseExceptionHandler(appBuilder =>
-                {
-                    appBuilder.Run(async context =>
-                    {
-                        var exceptionHandlerFeature = context.Features.Get<IExceptionHandlerFeature>();
-                        if (exceptionHandlerFeature != null)
-                        {
-                            var logger = loggerFactory.CreateLogger("Global exception logger");
-                            logger.LogError(500, exceptionHandlerFeature.Error, exceptionHandlerFeature.Error.Message);
-                            Log.Error(exceptionHandlerFeature.Error, "An unexpected fault happened. Try again later");
-                        }
-
-                        context.Response.StatusCode = 500;
-                        await context.Response.WriteAsync("An unexpected fault happened. Try again later");
-                    });
-                });
+                app.UseExceptionHandler("/Error");
+                app.UseHsts();
             }
-            app.UseExceptionHandler(a => a.Run(async context =>
-            {
-                var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature>();
-                var exception = exceptionHandlerPathFeature.Error;
-
-                var result = JsonConvert.SerializeObject(new
-                {
-                    Message = !string.IsNullOrEmpty(exception.Message) ? exception.Message : "No Message",
-                    Source = !string.IsNullOrEmpty(exception.Source) ? exception.Source : "No Source",
-                    InnerException = exception.InnerException != null ? exception.InnerException.Message : "No Inner Exception"
-                });
-                context.Response.ContentType = "application/json";
-                await context.Response.WriteAsync(result);
-            }));
-
-            app.UseCors("CorsPolicy");
-
-            app.UseRouting();
 
             app.UseHttpsRedirection();
-
-            app.UseAuthentication();
-            app.UseAuthorization();
-            app.UseSerilogRequestLogging();
-
-            app.UseSwagger(o =>
-            {
-                o.RouteTemplate = "docs/{documentName}/docs.json";
-            });
-            app.UseSwagger(o =>
-            {
-                o.RouteTemplate = "dev/{documentName}/dev.json";
-            });
-
-            app.UseSwaggerUI(c =>
-            {
-                c.EnableDeepLinking();
-                c.EnableFilter();
-                c.ShowExtensions();
-                c.EnableValidator();
-                c.DisplayRequestDuration();
-                c.DocumentTitle = "We kare Api 1.0";
-                c.RoutePrefix = "dev";
-                c.SwaggerEndpoint("/dev/v1/dev.json", "WK Api");
-                c.InjectStylesheet("/css/custom.css");
-                c.InjectJavascript("/js/custom.js");
-            });
-            app.UseReDoc(c =>
-            {
-                c.RoutePrefix = "docs";
-                c.SpecUrl = "v1/docs.json";
-                c.ConfigObject = new ConfigObject
-                {
-                    HideDownloadButton = true,
-                    HideLoading = true
-                };
-            });
             app.UseStaticFiles();
+            app.UseRouting();
+            
+            Console.WriteLine("Middleware configured");
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
+            
+            Console.WriteLine("Application configuration completed");
         }
     }
 }

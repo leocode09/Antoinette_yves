@@ -395,14 +395,14 @@ namespace WeCareWebApp.Services
 
         #region Role
 
-        public async Task<List<Role>> GetRoles()
+        public async Task<IEnumerable<Entities.Role>> GetRoles()
         {
             return await _context.Roles.ToListAsync();
         }
 
-        public async Task<Role> GetRole(int id)
+        public async Task<Entities.Role> GetRole(int id)
         {
-            return await _context.Roles.FirstOrDefaultAsync(i => i.Id == id);
+            return await _context.Roles.FindAsync(id);
         }
 
         public async Task<int> GetRoleMaxId()

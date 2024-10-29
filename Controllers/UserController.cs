@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TextmagicRest;
 using WeCareWebApp.Entities;
 using WeCareWebApp.Helpers;
 using WeCareWebApp.Models;
@@ -279,17 +278,8 @@ namespace WeCareWebApp.Controllers
         {
             try
             {
-                var client = new Client("test", "my-api-key");
-                var link = client.SendMessage("Hello from TextMagic API", $"{phone}");
-
-                if (link.Success)
-                {
-                    return Ok($"Message ID {link.Id} has been successfully sent");
-                }
-                else
-                {
-                    return  BadRequest($"Message was not sent due to following exception: {link.ClientException.Message}");
-                }
+                // Replace with alternative SMS implementation or return NotImplemented
+                return StatusCode(501, "SMS functionality not implemented");
             }
             catch(Exception ex)
             {

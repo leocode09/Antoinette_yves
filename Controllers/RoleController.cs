@@ -49,7 +49,7 @@ namespace WeCareWebApp.Controllers
                 if (!ModelState.IsValid) return BadRequest("Provide all required information.");
 
                 // Declaration of the object to be saved and population all the required information
-                var addDto = new Role();
+                var addDto = new RoleDto();
                 addDto.Id = await _repo.GetRoleMaxId()+ 1;
                 addDto.Name = inputDto.Name;
 

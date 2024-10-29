@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/+O1vZZYAs8=",
+  "dgSpecHash": "HvHX66gJiMk=",
   "success": true,
   "projectFilePath": "C:\\i\\Antoinette_yves\\WeCareWebApp.csproj",
   "expectedPackageFiles": [
@@ -132,29 +132,7 @@
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
-    "C:\\Users\\LENOVO\\.nuget\\packages\\textmagicrest\\1.0.0.5\\textmagicrest.1.0.0.5.nupkg.sha512"
+    "C:\\Users\\LENOVO\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: TextmagicRest 1.0.0.5 requires RestSharp (= 105.1.0) but version RestSharp 112.1.0 was resolved.",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'TextmagicRest 1.0.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "TextmagicRest",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

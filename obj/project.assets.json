@@ -2443,18 +2443,6 @@
             "rid": "win"
           }
         }
-      },
-      "TextmagicRest/1.0.0.5": {
-        "type": "package",
-        "dependencies": {
-          "RestSharp": "[105.1.0]"
-        },
-        "compile": {
-          "lib/net45/TextmagicRest.dll": {}
-        },
-        "runtime": {
-          "lib/net45/TextmagicRest.dll": {}
-        }
       }
     }
   },
@@ -6191,18 +6179,6 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "TextmagicRest/1.0.0.5": {
-      "sha512": "cjtG8pGAV8hNrqstU1vZVxcOE1XJoV6EU+O61apKD0Tp+AuUWkGC/iQuhCJMf7/w3Ja6Wh5SNLx33XjAzu3T5g==",
-      "type": "package",
-      "path": "textmagicrest/1.0.0.5",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net45/TextmagicRest.dll",
-        "textmagicrest.1.0.0.5.nupkg.sha512",
-        "textmagicrest.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
@@ -6223,8 +6199,7 @@
       "Serilog.AspNetCore >= 8.0.3",
       "Swashbuckle.AspNetCore >= 6.9.0",
       "Swashbuckle.AspNetCore.ReDoc >= 6.9.0",
-      "Swashbuckle.AspNetCore.Swagger >= 6.9.0",
-      "TextmagicRest >= 1.0.0.5"
+      "Swashbuckle.AspNetCore.Swagger >= 6.9.0"
     ]
   },
   "packageFolders": {
@@ -6348,10 +6323,6 @@
           "Swashbuckle.AspNetCore.Swagger": {
             "target": "Package",
             "version": "[6.9.0, )"
-          },
-          "TextmagicRest": {
-            "target": "Package",
-            "version": "[1.0.0.5, )"
           }
         },
         "imports": [
@@ -6376,27 +6347,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: TextmagicRest 1.0.0.5 requires RestSharp (= 105.1.0) but version RestSharp 112.1.0 was resolved.",
-      "libraryId": "RestSharp",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'TextmagicRest 1.0.0.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
-      "libraryId": "TextmagicRest",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }

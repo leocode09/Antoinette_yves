@@ -15,35 +15,24 @@ namespace WeCareWebApp
     {
         public static void Main(string[] args)
         {
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
-                .Enrich.FromLogContext()
-                .WriteTo.File(@"C:\File\WKare\FileLog.txt")
-                .CreateLogger();
-
-
             try
             {
-                Log.Information("Starting up the Application");
-
-                CreateHostBuilder(args).Build().Run();
-                return;
+                Console.WriteLine("Starting application...");
+                var host = CreateHostBuilder(args).Build();
+                Console.WriteLine("Host built successfully");
+                
+                Console.WriteLine("Starting host...");
+                host.Run();
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "There is problem starting the Application");
-                return;
-            }
-            finally
-            {
-                Log.CloseAndFlush();
+                Console.WriteLine($"Application failed to start: {ex.Message}");
+                throw;
             }
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .UseSerilog()
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

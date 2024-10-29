@@ -22,11 +22,11 @@ namespace WeCareWebApp.Pages.RolePages
             _client = client;
         }
 
-        public IList<Role> Role { get;set; }
+        public IList<RoleDto> Role { get; set; }
 
         public async Task OnGetAsync()
         {
-            Role = await _client.GetFromJsonAsync<List<Role>>(Connection.ApiHost + "/Roles");
+            Role = await _client.GetFromJsonAsync<List<RoleDto>>(Connection.ApiHost + "/Roles");
         }
     }
 }

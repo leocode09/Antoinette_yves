@@ -1,14 +1,21 @@
+<!-- Defines this as a web application using .NET SDK -->
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <!-- Specifies the target .NET version -->
     <TargetFramework>net8.0</TargetFramework>
+    <!-- Includes native libraries when publishing as self-contained -->
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <!-- Unique identifier for user secrets storage -->
     <UserSecretsId>d5e01a59-e83b-480c-9015-bab58a82ddb1</UserSecretsId>
+    <!-- Runs the app in a separate process from IIS -->
     <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Generates XML documentation file for API documentation -->
+    <!-- <GenerateDocumentationFile>true</GenerateDocumentationFile> -->
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Excludes the DynamicPages folder and its contents from various build actions -->
     <Compile Remove="Pages\DynamicPages\**" />
     <Content Remove="Pages\DynamicPages\**" />
     <EmbeddedResource Remove="Pages\DynamicPages\**" />
@@ -16,16 +23,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Removes specific migration files from compilation -->
     <Compile Remove="Migrations\20220214133727_psyTrsnMigrx.cs" />
     <Compile Remove="Migrations\20220214133727_psyTrsnMigrx.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <!-- NuGet package references with specific versions -->
+    <!-- Object-to-object mapping library -->
     <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <!-- Azure Application Insights monitoring -->
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.22.0" />
+    <!-- HTTP client library -->
     <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="6.0.0" />
+    <!-- Authentication and authorization -->
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.10" />
+    <!-- JSON handling for ASP.NET Core -->
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.10" />
+    <!-- Entity Framework Core packages for database operations -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
@@ -33,40 +48,53 @@
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.10" />
+    <!-- JWT authentication middleware -->
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.10" />
+    <!-- EF Core tools for migrations and database management -->
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <!-- REST API client library -->
     <PackageReference Include="RestSharp" Version="112.1.0" />
-    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="112.1.0" />
+    <!-- Structured logging for ASP.NET Core -->
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <!-- Swagger/OpenAPI documentation tools -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.9.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.ReDoc" Version="6.9.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.9.0" />
-    <PackageReference Include="TextmagicRest" Version="1.0.0.5" />
+    <!-- SMS messaging library -->
+    <!-- <PackageReference Include="TextmagicRest" Version="1.0.0.5" /> -->
+    <!-- Add this back under the RestSharp package reference -->
+    <PackageReference Include="RestSharp.Serializers.NewtonsoftJson" Version="112.1.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Razor pages for various business entities -->
+    <!-- Business Service pages -->
     <None Include="Pages\BusinessServicePages\Create.cshtml" />
     <None Include="Pages\BusinessServicePages\Delete.cshtml" />
     <None Include="Pages\BusinessServicePages\Details.cshtml" />
     <None Include="Pages\BusinessServicePages\Edit.cshtml" />
     <None Include="Pages\BusinessServicePages\Index.cshtml" />
+    <!-- Business Client pages -->
     <None Include="Pages\BusinessClientPages\Create.cshtml" />
     <None Include="Pages\BusinessClientPages\Delete.cshtml" />
     <None Include="Pages\BusinessClientPages\Details.cshtml" />
     <None Include="Pages\BusinessClientPages\Edit.cshtml" />
     <None Include="Pages\BusinessClientPages\Index.cshtml" />
+    <!-- Partner pages -->
     <None Include="Pages\PartnerPages\Create.cshtml" />
     <None Include="Pages\PartnerPages\Delete.cshtml" />
     <None Include="Pages\PartnerPages\Details.cshtml" />
     <None Include="Pages\PartnerPages\Edit.cshtml" />
+    <!-- Role management pages -->
     <None Include="Pages\RolePages\Create.cshtml" />
     <None Include="Pages\RolePages\Delete.cshtml" />
     <None Include="Pages\RolePages\Details.cshtml" />
     <None Include="Pages\RolePages\Edit.cshtml" />
     <None Include="Pages\RolePages\Index.cshtml" />
+    <!-- User management pages -->
     <None Include="Pages\UserPages\Create.cshtml" />
     <None Include="Pages\UserPages\Delete.cshtml" />
     <None Include="Pages\UserPages\Details.cshtml" />
