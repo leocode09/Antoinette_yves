@@ -98,7 +98,11 @@ namespace WeCareWebApp
                     Title = "WK API",
                     Description = "We Kare Api 1.0 ",
                     TermsOfService = new Uri("http://www.wkya.rw"),
-                    Contact = new OpenApiContact() { Name = "wecare", Email = "rwahamanick@gmail.com", Url = new Uri("http://www.wkya.rw") }
+                    Contact = new OpenApiContact() { 
+                        Name = "wecare", 
+                        Email = "rwahamanick@gmail.com", 
+                        Url = new Uri("http://www.wkya.rw") 
+                    }
                 });
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {
